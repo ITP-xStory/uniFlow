@@ -10,7 +10,7 @@
 - [Documentation](#documentation)
 - [Accessibility](#accessibility)
 - [Mentoring](#mentoring)
-- [More about you](#more-about-you)
+- [More about team](#more-about-team)
   - [Ilana Pecis Bonder](#ilana-pecis-bonder)
   - [Alice Sun](#alice-sun)
   - [Lin Zhang](#lin-zhang)
@@ -27,69 +27,68 @@ The Dialogflow V2 Unity Plugin is a continuation from [Api.ai: Unity Plugin](htt
 ## Define the problem
 - Api.ai: Unity Plugin is no longer working in Dialogflow V2, due to the difference in the way the basic system works ([Dialogflow API v2 versus v1](https://miningbusinessdata.com/dialogflow-api-v2-versus-v1/)).
 - Dialogflow API V1 will be shut down in one year – on [October 23rd, 2019](https://plus.google.com/+dialogflow/posts/M6EUgZFhckL).
-- Our challenge will be figuring out ways to build similar plugin as the Api.ai Unity Plugin that works in Dialogflow V2 system.
+- Our goal will be figuring out ways to build similar plugin that works in Dialogflow V2 system.
 
 ## Address Greater Landscape
 Opening new possibilities to involve voice-based conversational interaction in VR and AR environment.
 
 ## Deliverables
-
-_Propose a clear list of deliverables._
+- Feature: listening and sending voice data from Unity to the Dialogflow V2 service for recognition and processing
+- Doc: show and explain how to use it (including stt process)
 
 ## Implementation
-
 _Describe the technical details about your implementation and development process._
 
 ## Timeline
-
 This project will be completed over 5 weeks (Nov 6 - Dec 11). Describe a timeline in detail below.
 
 ### Week 1
-
-- Task list
+- Defining project schedule and make proposal [presentation](https://docs.google.com/presentation/d/1mL3yOky0exaPJceU6yWSf6stgKd8rLB1gd0UZUrA8hg/edit?usp=sharing).
+- Reaching out mentors.
+- Meeting with Nicole @1PM, Nov 8.
+- Dialogflow V2 Unity Plugin Hackathon Nov 11.
 
 ### Week 2
-
-- Task list
+- Dialogflow V2 Unity Plugin Hackathon Nov 18.
+- TBD
 
 ### Week 3
-
-- Task list
+- Dialogflow V2 Unity Plugin Hackathon Nov 25.
+- TBD
 
 ### Week 4
-
-- Task list
+- Dialogflow V2 Unity Plugin Hackathon Dec 2.
+- TBD
 
 ### Week 5
-
-- Task list
+- Dialogflow V2 Unity Plugin Hackathon Dec 9.
+- TBD
 
 ## Documentation
-
-_Describe your plan for documentation. Will you keep a blog? Make videos? Some project management tool? Track everything on GitHub as issues?_
-
-## Longer-Term Goals
-
-_What do you see as the longer term plan for this project and your project involvement?_
+- The documentation that is more related to detailed process or personal thoughts will be written in individual's blog posts, while information that can be used as instructions or to guide other people will exist inside this project repository for further users and contributors. Initial documentation including basic intro, proposal and schedule will be continuously updated in README.md.
 
 ## Accessibility
-
-_What challenges are there related to your project in terms of Web Content Accessibility Requirements: [see the Accessibility assignment as a reference](https://github.com/Open-Source-Studio-at-ITP/Syllabus/blob/source/accessibility-assignment.md#instructions)._
+All documentation will be done with considerations of the [W3C Web Content Accessibility Guide](https://www.w3.org/WAI/standards-guidelines/wcag/).
 
 ## Mentoring
+- Nicole He: Dialogflow Mentor
+- Igal Nassima: Unity Mentor
 
-_List some possible mentors for this project. Describe what kinds of help you need (technical, conceptual, outreach, etc.) For more, read [the mentor guidelines](https://github.com/Open-Source-Studio-at-ITP/Final-Projects/blob/source/mentor-guidelines.md)_
-
-## More about you
+## More about team
 
 ### Ilana Pecis Bonder
+- Creative Technologist and UI/UX Specialist
+- Interactive Telecommunications Program (ITP)
+- [Portfolio](http://www.ilanabonder.com/)
 ### Alice Sun
+- Graphic & interaction designer
+- Interactive Telecommunications Program (ITP)
+- [Blog](http://www.alicehgsun.com/blog)
 ### Lin Zhang
+- Front-end developer
+- Interactive Telecommunications Program (ITP)
+- [Blog](https://linzhangcs.github.io/blog/)
 
 ## References
-
-This proposal template was created with material and advice from:
-
-- [How to write a proposal for GSoC](http://teom.org/blog/kde/how-to-write-a-kick-ass-proposal-for-google-summer-of-code/)
-- [Processing Foundation GSoC application template](https://docs.google.com/document/d/1UFcWh2IWqhICh4YIFNwtKUaWWXifaBB67rjPxbYzjbE/edit)
-- [Getting into Summer of Code programs](http://exploreshaifali.github.io/2015/06/08/getting-into-summer-of-code-programs/)
+- [Api.ai: Unity Plugin](https://github.com/dialogflow/dialogflow-unity-client)
+- [Dialogflow API v2 versus v1](https://miningbusinessdata.com/dialogflow-api-v2-versus-v1/)
