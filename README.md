@@ -34,7 +34,7 @@ Opening new possibilities to involve voice-based conversational interaction in V
 
 ## Deliverables
 - Feature: listening and sending voice data from Unity to the Dialogflow V2 service for recognition and processing
-- Doc: show and explain how to use it (including stt process)
+- Doc: show and explain how to use it (including TTS process)
 
 ## Implementation
 _Describe the technical details about your implementation and development process._
