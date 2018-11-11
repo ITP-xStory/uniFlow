@@ -17,20 +17,20 @@
 - [References](#references)
 
 ## Project Description
-
 The Dialogflow V2 Unity Plugin is a continuation from [Api.ai: Unity Plugin](https://github.com/dialogflow/dialogflow-unity-client), which made it easy to integrate the Dialogflow(Api.ai) natural language processing API into your Unity project.
 
 ## Team Members
-
-_Names and urls for collaborators_
+- [Ilana Pecis Bonder](https://github.com/ilanabonder)
+- [Alice Sun](https://github.com/alicehgsun)
+- [Lin Zhang](https://github.com/linzhangcs)
 
 ## Define the problem
-
-_What is the current state of things? What issue do you wish to solve and why? What need / gap does this project fill? Who is the audience?_
+- Api.ai: Unity Plugin is no longer working in Dialogflow V2, due to the difference in the way the basic system works ([Dialogflow API v2 versus v1](https://miningbusinessdata.com/dialogflow-api-v2-versus-v1/)).
+- Dialogflow API V1 will be shut down in one year – on [October 23rd, 2019](https://plus.google.com/+dialogflow/posts/M6EUgZFhckL).
+- Our challenge will be figuring out ways to build similar plugin as the Api.ai Unity Plugin that works in Dialogflow V2 system.
 
 ## Address Greater Landscape
-
-_Please address how the open source project you are creating or contributing to fits into a greater field or tech landscape. Who has done similar work before? How are you building off this, and how? What sets your project apart from your colleagues?_
+Opening new possibilities to involve voice-based conversational interaction in VR and AR environment.
 
 ## Deliverables
 
