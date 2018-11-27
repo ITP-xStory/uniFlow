@@ -49,12 +49,17 @@ This project will be completed over 5 weeks (Nov 6 - Dec 11). Describe a timelin
 - Analyzing the authentication process in Dialogflow V2
   - [Authentication via Google Cloud Service Account JSON key](https://dialogflow.com/docs/reference/v2-auth-setup)
   - It will give 401 error without adding the generated “client_email” in JSON file into the Dialogflow project authentication panel:
+
 ![Dialogflow API Admin](images/auth-admin.png)
+
 ![401 error to access Dialogflow project](images/auth-access.png)
+
   - Adding the “client_email” to "INVITE NEW PEOPLE" will give access to the Dialogflow project:
+
 ![Successful access to Dialogflow project](images/auth-401.png)
+
 - [JSON Web Token (JWT)](http://leoncvlt.com/blog/json-web-token-jwt-for-google-cloud-platform-in-unity/) for Google Clout Platform in Unity
-- How to automate this process?
+- How can we automate this process?
 
 ### Week 3
 - [Audio Request Support](https://dialogflow.com/docs/reference/api-v2/rest/v2/projects.agent.sessions/detectIntent#QueryInput): Passing audio file directly via V2 API call
