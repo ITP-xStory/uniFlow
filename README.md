@@ -4,7 +4,6 @@
 - [Define the problem](#define-the-problem)
 - [Address Greater Landscape](#address-greater-landscape)
 - [Deliverables](#deliverables)
-- [Implementation](#implementation)
 - [Timeline](#timeline)
 - [Documentation](#documentation)
 - [Documentation](#documentation)
@@ -50,13 +49,19 @@ This project will be completed over 5 weeks (Nov 6 - Dec 11). Describe a timelin
   - [Authentication via Google Cloud Service Account JSON key](https://dialogflow.com/docs/reference/v2-auth-setup)
   - It will give 401 error without adding the generated “client_email” in JSON file into the Dialogflow project authentication panel:
 
-![Dialogflow API Admin](images/auth-admin.png)
+<table><tr><td>
+<img src="images/auth-admin.png"/ alt="Dialogflow API Admin">
+</td></tr></table>
 
-![401 error to access Dialogflow project](images/auth-access.png)
+<table><tr><td>
+<img src="images/auth-401.png"/ alt="401 error to access Dialogflow project">
+</td></tr></table>
 
   - Adding the “client_email” to "INVITE NEW PEOPLE" will give access to the Dialogflow project:
 
-![Successful access to Dialogflow project](images/auth-401.png)
+<table><tr><td>
+<img src="images/auth-access.png"/ alt="Successful access to Dialogflow project">
+</td></tr></table>
 
 - [JSON Web Token (JWT)](http://leoncvlt.com/blog/json-web-token-jwt-for-google-cloud-platform-in-unity/) for Google Clout Platform in Unity
 - How can we automate this process?
@@ -64,11 +69,15 @@ This project will be completed over 5 weeks (Nov 6 - Dec 11). Describe a timelin
 ### Week 3
 - [Audio Request Support](https://dialogflow.com/docs/reference/api-v2/rest/v2/projects.agent.sessions/detectIntent#QueryInput): Passing audio file directly via V2 API call
 
-![Audio request support from Dialogflow](images/audio-support.png)
+<table><tr><td>
+<img src="images/audio-support.png"/ alt="Audio request support from Dialogflow">
+</td></tr></table>
 
 - Using [Audio Source](https://docs.unity3d.com/Manual/class-AudioSource.html) in Unity to [capture audio from a microphone](https://github.com/alicehgsun/dialogflow-unity-v2/blob/master/microphoneCapture.cs)
 
-![Audio Source in Unity](images/audio-source.png)
+<table><tr><td>
+<img src="images/audio-source.png"/ alt="Audio Source in Unity">
+</td></tr></table>
 
 
 ### Week 4
