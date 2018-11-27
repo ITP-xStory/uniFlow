@@ -249,3 +249,4 @@
 /Users/linzhang/Documents/ITP/Fall2018/OSS/dialogflowproject/obj/Debug/Assembly-CSharp.dll
 /Users/linzhang/Documents/ITP/Fall2018/OSS/dialogflowproject/obj/Debug/Assembly-CSharp.pdb
 /Users/linzhang/Documents/ITP/Fall2018/OSS/dialogflowproject/Temp/bin/Debug/System.Configuration.dll
+/Users/linzhang/Documents/ITP/Fall2018/OSS/dialogflowproject/Temp/bin/Debug/Assembly-CSharp-firstpass.pdb

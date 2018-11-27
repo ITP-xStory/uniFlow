@@ -189,4 +189,5 @@
 -define:UNITY_TEAM_LICENSE
 -define:ENABLE_VSTU
 'Assets/DialogflowAPIScript.cs'
+'Assets/MicrophoneCapture.cs'
 -lib:'/Applications/Unity/Hub/Editor/2018.2.7f1/Unity.app/Contents/MonoBleedingEdge/lib/mono/2.0-api'

@@ -2,7 +2,9 @@
   <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="Unity.Editor" />
   <MonoDevelop.Ide.Workbench ActiveDocument="Assets/DialogflowAPIScript.cs">
     <Files>
-      <File FileName="Assets/DialogflowAPIScript.cs" Line="6" Column="1" />
+      <File FileName="Assets/Plugins/JsonData.cs" Line="89" Column="16" />
+      <File FileName="Assets/DialogflowAPIScript.cs" Line="18" Column="109" />
+      <File FileName="../../magicWindows/ARCore/Assets/Plugins/visionClasses.cs" Line="93" Column="29" NotebookId="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
