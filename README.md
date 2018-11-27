@@ -44,24 +44,24 @@ This project will be completed over 5 weeks (Nov 6 - Dec 11). Describe a timelin
 
 ### Week 1
 - Defining project schedule and make proposal [presentation](https://docs.google.com/presentation/d/1mL3yOky0exaPJceU6yWSf6stgKd8rLB1gd0UZUrA8hg/edit?usp=sharing).
-- Reaching out mentors.
-- Meeting with Nicole @1PM, Nov 8.
-- Dialogflow V2 Unity Plugin Hackathon Nov 11.
+- Reaching out mentors
+- Meeting with Nicole @1PM, Nov 8
+- Dialogflow V2 Unity Plugin Hackathon Nov 11
 
 ### Week 2
-- Dialogflow V2 Unity Plugin Hackathon Nov 18.
-- TBD
+- Analyzing the authentication process in Dialogflow V2
+- Authentication via Google Cloud Service Account JSON key
+- [JSON Web Token (JWT)](http://leoncvlt.com/blog/json-web-token-jwt-for-google-cloud-platform-in-unity/) for Google Clout Platform in Unity
+- How to automate this process?
 
 ### Week 3
-- Dialogflow V2 Unity Plugin Hackathon Nov 25.
-- TBD
+- [Audio Request Support](https://dialogflow.com/docs/reference/api-v2/rest/v2/projects.agent.sessions/detectIntent#QueryInput): Passing audio file directly via V2 API call
+- Using [Audio Source](https://docs.unity3d.com/Manual/class-AudioSource.html) in Unity to [capture audio from a microphone](https://github.com/alicehgsun/dialogflow-unity-v2/blob/master/microphoneCapture.cs)
 
 ### Week 4
-- Dialogflow V2 Unity Plugin Hackathon Dec 2.
 - TBD
 
 ### Week 5
-- Dialogflow V2 Unity Plugin Hackathon Dec 9.
 - TBD
 
 ## Documentation
