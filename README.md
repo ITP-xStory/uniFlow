@@ -34,23 +34,25 @@ Opening new possibilities to involve voice-based conversational interaction in V
 
 ## Deliverables
 - Feature: listening and sending voice data from Unity to the Dialogflow V2 service for recognition and processing
-- Doc: show and explain how to use it (including TTS process)
-
-## Implementation
-_Describe the technical details about your implementation and development process._
+- Doc: show and explain how to use it (including STT process, if required)
 
 ## Timeline
 This project will be completed over 5 weeks (Nov 6 - Dec 11). Describe a timeline in detail below.
 
 ### Week 1
-- Defining project schedule and make proposal [presentation](https://docs.google.com/presentation/d/1mL3yOky0exaPJceU6yWSf6stgKd8rLB1gd0UZUrA8hg/edit?usp=sharing).
+- Defining project schedule and make proposal [presentation](https://docs.google.com/presentation/d/1mL3yOky0exaPJceU6yWSf6stgKd8rLB1gd0UZUrA8hg/edit?usp=sharing)
 - Reaching out mentors
 - Meeting with Nicole @1PM, Nov 8
 - Dialogflow V2 Unity Plugin Hackathon Nov 11
 
 ### Week 2
 - Analyzing the authentication process in Dialogflow V2
-- Authentication via Google Cloud Service Account JSON key
+  - [Authentication via Google Cloud Service Account JSON key](https://dialogflow.com/docs/reference/v2-auth-setup)
+  - It will give 401 error without adding the generated “client_email” in JSON file into the Dialogflow project authentication panel:
+![Dialogflow API Admin](images/auth-admin.png)
+![401 error to access Dialogflow project](images/auth-access.png)
+  - Adding the “client_email” to "INVITE NEW PEOPLE" will give access to the Dialogflow project:
+![Successful access to Dialogflow project](images/auth-401.png)
 - [JSON Web Token (JWT)](http://leoncvlt.com/blog/json-web-token-jwt-for-google-cloud-platform-in-unity/) for Google Clout Platform in Unity
 - How to automate this process?
 
