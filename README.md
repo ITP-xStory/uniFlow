@@ -63,7 +63,13 @@ This project will be completed over 5 weeks (Nov 6 - Dec 11). Describe a timelin
 
 ### Week 3
 - [Audio Request Support](https://dialogflow.com/docs/reference/api-v2/rest/v2/projects.agent.sessions/detectIntent#QueryInput): Passing audio file directly via V2 API call
+
+![Audio request support from Dialogflow](images/audio-support.png)
+
 - Using [Audio Source](https://docs.unity3d.com/Manual/class-AudioSource.html) in Unity to [capture audio from a microphone](https://github.com/alicehgsun/dialogflow-unity-v2/blob/master/microphoneCapture.cs)
+
+![Audio Source in Unity](images/audio-source.png)
+
 
 ### Week 4
 - TBD
