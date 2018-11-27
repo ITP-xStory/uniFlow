@@ -81,12 +81,13 @@ This project will be completed over 5 weeks (Nov 6 - Dec 11). Describe a timelin
 
 
 ### Week 4
+- Testing with a text call "hello", which received fulfillment response of "Hiiiii Unity~~~" from "Default Welcome Intent" in Dialogflow.
 
 <table><tr><td>
 <img src="images/text-response.png"/ alt="Fulfillment message in Unity via text input">
 </td></tr></table>
 
-- TBD
+- Next step is to moving on with Audio Source instead of text query.
 
 ### Week 5
 - TBD
