@@ -1,4 +1,4 @@
-﻿using System.Collections;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using System;
@@ -16,24 +16,19 @@ public class DialogflowAPIScript : MonoBehaviour {
 
         //https://stackoverflow.com/questions/51272889/unable-to-send-post-request-to-dialogflow-404
         //first param is the dialogflow API call, second param is Json web token
-        StartCoroutine(PostRequest("https://dialogflow.googleapis.com/v2/projects/test-67717/agent/sessions/34563:detectIntent",
-                                  "ya29.c.ElptBu_jlUH4fp7lFmMgPeJ_uFT86xzkLUYaBEljbY6eNUacLjr0xSiie2TweOukhGzZ8KvxGoH1IWtNiNLpmhvnzAjO5mRjV5qekyHggvt6Ua6l1Bq1DoCu9DE"));
+        StartCoroutine(PostRequest("https://dialogflow.googleapis.com/v2/projects/YOUR_PROJECT_ID/agent/sessions/1234:detectIntent",
+                                  "YOUR_ACCESS_TOKEN"));
     }
-	
+
 	// Update is called once per frame
 	void Update () {
-		
+
 	}
 
     IEnumerator PostRequest(String url, String AccessToken){
         UnityWebRequest postRequest = new UnityWebRequest(url, "POST");
         RequestBody requestBody = new RequestBody();
         requestBody.queryInput = new QueryInput();
-        // This is an audio api query
-        //requestBody.queryInput.audioConfig = new InputAudioConfig();
-        //requestBody.queryInput.audioConfig.audioEncoding = AudioEncoding.
-
-        // This is a text api query
         requestBody.queryInput.text = new TextInput();
         requestBody.queryInput.text.text = "hello";
         requestBody.queryInput.text.languageCode = "en";
@@ -92,36 +87,4 @@ public class DialogflowAPIScript : MonoBehaviour {
             byte[] results = www.downloadHandler.data;
         }
     }
-    //[Serializable]
-    //public class TokenClassName
-    //{
-    //    public string access_token;
-    //}
-
-    //private static IEnumerator GetAccessToken(Action<string> result)
-    //{
-    //    Dictionary<string, string> content = new Dictionary<string, string>();
-    //    //Fill key and value
-    //    content.Add("grant_type", "client_credentials");
-    //    content.Add("client_id", "login-secret");
-    //    content.Add("client_secret", "secretpassword");
-
-    //    UnityWebRequest www = UnityWebRequest.Post("https://someurl.com//oauth/token", content);
-    //    //Send request
-    //    yield return www.SendWebRequest();
-
-    //    if (!www.isNetworkError)
-    //    {
-    //        string resultContent = www.downloadHandler.text;
-    //        TokenClassName json = JsonUtility.FromJson<TokenClassName>(resultContent);
-
-    //        //Return result
-    //        result(json.access_token);
-    //    }
-    //    else
-    //    {
-    //        //Return null
-    //        result("");
-    //    }
-    //}
 }
