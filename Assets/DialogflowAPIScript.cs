@@ -1,4 +1,4 @@
-﻿using System.Collections;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using System;
@@ -7,7 +7,7 @@ using JsonData;
 
 //using Google.Apis.Dialogflow.v2;
 
-public class DialogflowAPIScript : MonoBehaviour {
+public class CURRENT_CS_FILE_NAME : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
@@ -16,13 +16,13 @@ public class DialogflowAPIScript : MonoBehaviour {
 
         //https://stackoverflow.com/questions/51272889/unable-to-send-post-request-to-dialogflow-404
         //first param is the dialogflow API call, second param is Json web token
-        StartCoroutine(PostRequest("https://dialogflow.googleapis.com/v2/projects/",
-                                  ""));
+        StartCoroutine(PostRequest("https://dialogflow.googleapis.com/v2/projects/YOUR_PROJECT_ID/agent/sessions/1234:detectIntent",
+                                  "YOUR_ACCESS_TOKEN"));
     }
-	
+
 	// Update is called once per frame
 	void Update () {
-		
+
 	}
 
     IEnumerator PostRequest(String url, String AccessToken){
@@ -62,7 +62,7 @@ public class DialogflowAPIScript : MonoBehaviour {
     IEnumerator GetAgent(String AccessToken)
     {
 
-        UnityWebRequest www = UnityWebRequest.Get("https://dialogflow.googleapis.com/v2/projects/test-67717/agent");
+        UnityWebRequest www = UnityWebRequest.Get("https://dialogflow.googleapis.com/v2/projects/YOUR_PROJECT_ID/agent");
         www.SetRequestHeader("Authorization", "Bearer " + AccessToken);
 
         yield return www.SendWebRequest();
