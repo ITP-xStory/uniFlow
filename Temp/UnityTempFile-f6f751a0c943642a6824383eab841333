@@ -67,6 +67,7 @@
 -r:'/Applications/Unity/Hub/Editor/2018.2.7f1/Unity.app/Contents/Managed/UnityEngine/UnityEngine.XRModule.dll'
 -r:'/Applications/Unity/Hub/Editor/2018.2.7f1/Unity.app/Contents/Managed/UnityEditor.dll'
 -r:'/Applications/Unity/Hub/Editor/2018.2.7f1/Unity.app/Contents/Managed/Unity.Locator.dll'
+-r:'Library/ScriptAssemblies/Assembly-CSharp-firstpass.dll'
 -r:'Library/ScriptAssemblies/UnityEditor.StandardEvents.dll'
 -r:'Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll'
 -r:'Library/ScriptAssemblies/Unity.PackageManagerUI.Editor.dll'
@@ -189,5 +190,5 @@
 -define:UNITY_TEAM_LICENSE
 -define:ENABLE_VSTU
 'Assets/DialogflowAPIScript.cs'
-'Assets/microphoneCapture.cs'
+'Assets/MicrophoneCapture.cs'
 -lib:'/Applications/Unity/Hub/Editor/2018.2.7f1/Unity.app/Contents/MonoBleedingEdge/lib/mono/2.0-api'

@@ -43,6 +43,7 @@ namespace JsonData
     [Serializable]
     public class QueryInput{
         public TextInput text;
+        //public InputAudioConfig audioConfig;
     }
     /*
      * InputAudioConfig
@@ -54,11 +55,13 @@ namespace JsonData
       "phraseHints": [
         string
       ]
-    }*/
+    }
+    * phraseHints - is optional
+    */
     [Serializable]
     public class InputAudioConfig
     {
-        public String audioEncoding;
+        public AudioEncoding audioEncoding;
         public int sampleReateHertz;
         public String languageCode;
         public String[] phraseHints;
@@ -67,7 +70,7 @@ namespace JsonData
      * Audio encoding of the audio content sent in the conversational query request. 
      * Refer to the Cloud Speech API documentation for more details.
      */
-
+    [Serializable]
     public enum AudioEncoding{
         AUDIO_ENCODING_UNSPECIFIED,
         AUDIO_ENCODING_LINEAR_16,
@@ -79,6 +82,17 @@ namespace JsonData
         AUDIO_ENCODING_SPEEX_WITH_HEADER_BYTE
     }
 
+    //https://dialogflow.com/docs/reference/api-v2/rest/Shared.Types/WebhookState
+    [Serializable]
+    public enum WebhookState{
+        STATE_UNSPECIFIED,
+        WEBHOOK_STATE_ENABLED,
+        WEBHOOK_STATE_ENABLED_FOR_SLOT_FILLING
+    }
+
+    public struct Format{
+
+    }
     /*
      * TextInput
      * Represents the natural language text to be processed.
@@ -91,5 +105,120 @@ namespace JsonData
     {
         public String text;
         public String languageCode;
+    }
+
+    /*response body json doc
+     * {
+          "responseId": string,
+          "queryResult": {
+            object(QueryResult)
+          },
+          "webhookStatus": {
+            object(Status)
+          }
+        }
+     */
+
+    [Serializable]
+    public class ResponseBody
+    {
+        public string responseId;
+        public QueryResult queryResult;
+        public Status webhookStatus;
+    }
+
+    //https://dialogflow.com/docs/reference/api-v2/rest/Shared.Types/QueryResult
+    /*{
+          "queryText": string,
+          "languageCode": string,
+          "speechRecognitionConfidence": number,
+          "action": string,
+          "parameters": {
+            object
+          },
+          "allRequiredParamsPresent": boolean,
+          "fulfillmentText": string,
+          "fulfillmentMessages": [
+            {
+              object(Message)
+            }
+          ],
+          "webhookSource": string,
+          "webhookPayload": {
+            object
+          },
+          "outputContexts": [
+            {
+              object(Context)
+            }
+          ],
+          "intent": {
+            object(Intent)
+          },
+          "intentDetectionConfidence": number,
+          "diagnosticInfo": {
+            object
+          }}*/
+    [Serializable]
+    public class QueryResult{
+        public string queryText;
+        public string languageCode;
+        public int speechRecognitionConfidence;
+        public string action;
+        public Object parameters;
+        public bool allRequiredParamsPresent;
+        public string fulfillmentText;
+        public Message[] fulfillmentMessages;
+        public string webhookSource;
+        public Object webhookPayload;
+        public Context[] outputContexts;
+        public Intent intent;
+        public int intentDetectionConfidence;
+        public Object diagnosticInfo;
+    }
+
+    //https://dialogflow.com/docs/reference/api-v2/rest/Shared.Types/Operation#Status.SCHEMA_REPRESENTATION
+    /*{
+      "code": number,
+      "message": string,
+      "details": [
+        {
+          "@type": string,
+          field1: ...,
+          ...
+        }
+      ]
+    }*/
+    [Serializable]
+    public class Status
+    {
+        public int code;
+        public string message;
+        public Object[] details;
+    }
+
+    //https://dialogflow.com/docs/reference/api-v2/rest/Shared.Types/Intent#SCHEMA_REPRESENTATION
+    [Serializable]
+    public class Intent{
+        public string name;
+        public string displayName;
+        public WebhookState webhookState;
+        public int priority;
+        public bool isFallback;
+    }
+    //https://dialogflow.com/docs/reference/api-v2/rest/Shared.Types/Context
+    [Serializable]
+    public class Context{
+        public string name;
+    }
+
+    [Serializable]
+    public class Message{
+        public Text[] text;
+    }
+
+    [Serializable]
+    public class Text{
+        public string text;
     }
 }

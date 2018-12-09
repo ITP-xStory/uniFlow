@@ -4,6 +4,7 @@
 -langversion:4
 -out:'Temp/Assembly-CSharp.dll'
 -nostdlib
+-r:'Library/ScriptAssemblies/Assembly-CSharp-firstpass.dll'
 -r:'/Applications/Unity/Hub/Editor/2018.2.7f1/Unity.app/Contents/Managed/UnityEngine/UnityEngine.dll'
 -r:'/Applications/Unity/Hub/Editor/2018.2.7f1/Unity.app/Contents/Managed/UnityEngine/UnityEngine.AIModule.dll'
 -r:'/Applications/Unity/Hub/Editor/2018.2.7f1/Unity.app/Contents/Managed/UnityEngine/UnityEngine.ARModule.dll'
@@ -189,5 +190,5 @@
 -define:UNITY_TEAM_LICENSE
 -define:ENABLE_VSTU
 'Assets/DialogflowAPIScript.cs'
-'Assets/SoundSource.cs'
+'Assets/MicrophoneCapture.cs'
 -lib:'/Applications/Unity/Hub/Editor/2018.2.7f1/Unity.app/Contents/MonoBleedingEdge/lib/mono/2.0-api'

@@ -2,7 +2,7 @@
 -target:library
 -nowarn:0169
 -langversion:4
--out:'Temp/Assembly-CSharp.dll'
+-out:'Temp/Assembly-CSharp-firstpass.dll'
 -nostdlib
 -r:'/Applications/Unity/Hub/Editor/2018.2.7f1/Unity.app/Contents/Managed/UnityEngine/UnityEngine.dll'
 -r:'/Applications/Unity/Hub/Editor/2018.2.7f1/Unity.app/Contents/Managed/UnityEngine/UnityEngine.AIModule.dll'
@@ -188,7 +188,5 @@
 -define:ENABLE_BURST_AOT
 -define:UNITY_TEAM_LICENSE
 -define:ENABLE_VSTU
-'Assets/DialogflowAPIScript.cs'
-'Assets/JsonData.cs'
-'Assets/MicrophoneCapture.cs'
+'Assets/Plugins/JsonData.cs'
 -lib:'/Applications/Unity/Hub/Editor/2018.2.7f1/Unity.app/Contents/MonoBleedingEdge/lib/mono/2.0-api'

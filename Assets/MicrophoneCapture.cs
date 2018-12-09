@@ -19,7 +19,7 @@ public class MicrophoneCapture : MonoBehaviour
 
     //Public variable for saving recorded sound clip
     public AudioClip recordedClip;
-
+    private float[] samples;
     //Use this for initialization  
     void Start()
     {
@@ -64,6 +64,8 @@ public class MicrophoneCapture : MonoBehaviour
                     //Start recording and store the audio captured from the microphone at the AudioClip in the AudioSource  
                     goAudioSource.clip = Microphone.Start(null, true, 20, maxFreq);
                     recordedClip = goAudioSource.clip;
+                    samples = new float[goAudioSource.clip.samples];
+
                 }
             }
             else //Recording is in progress  
@@ -72,7 +74,7 @@ public class MicrophoneCapture : MonoBehaviour
                 if (GUI.Button(new Rect(Screen.width / 2 - 100, Screen.height / 2 - 25, 200, 50), "Stop and Play!"))
                 {
                     Microphone.End(null); //Stop the audio recording  
-                    goAudioSource.Play(); //Playback the recorded audio  
+                    goAudioSource.Play(); //Playback the recorded audio
                     Debug.Log(recordedClip.length);
                 }
 
