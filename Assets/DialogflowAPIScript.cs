@@ -5,8 +5,6 @@ using System;
 using UnityEngine.Networking;
 using JsonData;
 
-//using Google.Apis.Dialogflow.v2;
-
 public class DialogflowAPIScript : MonoBehaviour {
 
 	// Use this for initialization
@@ -16,8 +14,8 @@ public class DialogflowAPIScript : MonoBehaviour {
 
         //https://stackoverflow.com/questions/51272889/unable-to-send-post-request-to-dialogflow-404
         //first param is the dialogflow API call, second param is Json web token
-        StartCoroutine(PostRequest("https://dialogflow.googleapis.com/v2/projects/YOUR_PROJECT_ID/agent/sessions/1234:detectIntent",
-                                  "YOUR_ACCESS_TOKEN"));
+        StartCoroutine(PostRequest("https://dialogflow.googleapis.com/v2/projects/test-67717/agent/sessions/34563:detectIntent",
+                                  "ya29.c.ElpvBn7gGgDX_OJqZHaBNC8jHBnq5Es6yUdpBLMJJYo6CvK-yH8-JUKLE4qboYjpc6L86CTLR7oHfLlv5urdD_uQqjNoyVg9dd8VGsvUxaDEvg3w2a2KxPgexeM"));
     }
 
 	// Update is called once per frame
@@ -60,6 +58,7 @@ public class DialogflowAPIScript : MonoBehaviour {
             string result = System.Text.Encoding.UTF8.GetString(resultbyte);
             ResponseBody content = (ResponseBody)JsonUtility.FromJson<ResponseBody>(result);
             Debug.Log(content.queryResult.fulfillmentText);
+            
         }
     }
     IEnumerator GetAgent(String AccessToken)
