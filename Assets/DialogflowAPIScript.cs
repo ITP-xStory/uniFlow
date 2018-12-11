@@ -10,12 +10,12 @@ public class DialogflowAPIScript : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
         // AccessToken is being generated manually in terminal
-        //StartCoroutine(GetAgent("ya29.c.ElpfBkjOUlTRSaNDg-i0tBjGc2WlRT9GePIqe1_j5Xq9flXHMGJWnn5sEjNHyG1VfMFqtt3WapHAVo2-RwvPNKRTHI0BkF9OVUzZJ5OWJEILr64_ge1tgcbS7AA"));
+        //StartCoroutine(GetAgent("YOUR_ACCESS_TOKEN"));
 
         //https://stackoverflow.com/questions/51272889/unable-to-send-post-request-to-dialogflow-404
         //first param is the dialogflow API call, second param is Json web token
-        StartCoroutine(PostRequest("https://dialogflow.googleapis.com/v2/projects/test-67717/agent/sessions/34563:detectIntent",
-                                  "ya29.c.ElpvBn7gGgDX_OJqZHaBNC8jHBnq5Es6yUdpBLMJJYo6CvK-yH8-JUKLE4qboYjpc6L86CTLR7oHfLlv5urdD_uQqjNoyVg9dd8VGsvUxaDEvg3w2a2KxPgexeM"));
+        StartCoroutine(PostRequest("https://dialogflow.googleapis.com/v2/projects/YOUR_PROJECT_ID/agent/sessions/34563:detectIntent",
+                                  "YOUR_ACCESS_TOKEN"));
     }
 
 	// Update is called once per frame
@@ -58,14 +58,14 @@ public class DialogflowAPIScript : MonoBehaviour {
             string result = System.Text.Encoding.UTF8.GetString(resultbyte);
             ResponseBody content = (ResponseBody)JsonUtility.FromJson<ResponseBody>(result);
             Debug.Log(content.queryResult.fulfillmentText);
-            
+
         }
     }
     IEnumerator GetAgent(String AccessToken)
     {
 
-        UnityWebRequest www = UnityWebRequest.Get("https://dialogflow.googleapis.com/v2/projects/test-67717/agent");
-       
+        UnityWebRequest www = UnityWebRequest.Get("https://dialogflow.googleapis.com/v2/projects/YOUR_PROJECT_ID/agent");
+
         www.SetRequestHeader("Authorization", "Bearer " + AccessToken);
 
         yield return www.SendWebRequest();
