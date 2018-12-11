@@ -50,17 +50,17 @@ This project will be completed over 5 weeks (Nov 6 - Dec 11). Describe a timelin
   - ~~It will give 401 error without adding the generated “client_email” in JSON file into the Dialogflow project authentication panel:~~
 
 <table><tr><td>
-<img src="images/auth-admin.png"/ alt="Dialogflow API Admin">
+<img src="docs/images/auth-admin.png"/ alt="Dialogflow API Admin">
 </td></tr></table>
 
 <table><tr><td>
-<img src="images/auth-401.png"/ alt="401 error to access Dialogflow project">
+<img src="docs/images/auth-401.png"/ alt="401 error to access Dialogflow project">
 </td></tr></table>
 
   - ~~Adding the “client_email” to "INVITE NEW PEOPLE" will give access to the Dialogflow project:~~
 
 <table><tr><td>
-<img src="images/auth-access.png"/ alt="Successful access to Dialogflow project">
+<img src="docs/images/auth-access.png"/ alt="Successful access to Dialogflow project">
 </td></tr></table>
 
 - [JSON Web Token (JWT)](http://leoncvlt.com/blog/json-web-token-jwt-for-google-cloud-platform-in-unity/) for Google Clout Platform in Unity
@@ -70,21 +70,21 @@ This project will be completed over 5 weeks (Nov 6 - Dec 11). Describe a timelin
 - [Audio Request Support](https://dialogflow.com/docs/reference/api-v2/rest/v2/projects.agent.sessions/detectIntent#QueryInput): Passing audio file directly via V2 API call
 
 <table><tr><td>
-<img src="images/audio-support.png"/ alt="Audio request support from Dialogflow">
+<img src="docs/images/audio-support.png"/ alt="Audio request support from Dialogflow">
 </td></tr></table>
 
 - Using [Audio Source](https://docs.unity3d.com/Manual/class-AudioSource.html) in Unity to [capture audio from a microphone](https://github.com/alicehgsun/dialogflow-unity-v2/blob/master/microphoneCapture.cs)
 
 <table><tr><td>
-<img src="images/audio-source.png"/ alt="Audio Source in Unity">
+<img src="docs/images/audio-source.png"/ alt="Audio Source in Unity">
 </td></tr></table>
 
 
 ### Week 4
-- Testing with a text call "hello", which received fulfillment response of "Hiiiii Unity~~~" from "Default Welcome Intent" in Dialogflow.
+- Testing with a text call "hello", which received fulfillment response of "Hiiiii Unity~~~" from "Default Welcome Intent" in Dialogflow
 
 <table><tr><td>
-<img src="images/text-response.png"/ alt="Fulfillment message in Unity via text input">
+<img src="docs/images/text-response.png"/ alt="Fulfillment message in Unity via text input">
 </td></tr></table>
 
 
@@ -93,7 +93,7 @@ This project will be completed over 5 weeks (Nov 6 - Dec 11). Describe a timelin
 - Creating example!
 
 ## Documentation
-- The documentation that is more related to detailed process or personal thoughts will be written in individual's blog posts, while information that can be used as instructions or to guide other people will exist inside this project repository for further users and contributors. Initial documentation including basic intro, proposal and schedule will be continuously updated in README.md.
+- Initial documentation including basic intro, proposal and brief process will be updated in README.md, while instructional contents will exist as a [GitHub Page](https://alicehgsun.github.io/dialogflow-unity-v2/).
 
 ## Accessibility
 All documentation will be done with considerations of the [W3C Web Content Accessibility Guide](https://www.w3.org/WAI/standards-guidelines/wcag/).
