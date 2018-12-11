@@ -47,7 +47,7 @@ This project will be completed over 5 weeks (Nov 6 - Dec 11). Describe a timelin
 ### Week 2
 - Analyzing the authentication process in Dialogflow V2
   - [Authentication via Google Cloud Service Account JSON key](https://dialogflow.com/docs/reference/v2-auth-setup)
-  - It will give 401 error without adding the generated “client_email” in JSON file into the Dialogflow project authentication panel:
+  - ~~It will give 401 error without adding the generated “client_email” in JSON file into the Dialogflow project authentication panel:~~
 
 <table><tr><td>
 <img src="images/auth-admin.png"/ alt="Dialogflow API Admin">
@@ -57,7 +57,7 @@ This project will be completed over 5 weeks (Nov 6 - Dec 11). Describe a timelin
 <img src="images/auth-401.png"/ alt="401 error to access Dialogflow project">
 </td></tr></table>
 
-  - Adding the “client_email” to "INVITE NEW PEOPLE" will give access to the Dialogflow project:
+  - ~~Adding the “client_email” to "INVITE NEW PEOPLE" will give access to the Dialogflow project:~~
 
 <table><tr><td>
 <img src="images/auth-access.png"/ alt="Successful access to Dialogflow project">
@@ -87,10 +87,10 @@ This project will be completed over 5 weeks (Nov 6 - Dec 11). Describe a timelin
 <img src="images/text-response.png"/ alt="Fulfillment message in Unity via text input">
 </td></tr></table>
 
-- Next step is to moving on with Audio Source instead of text query.
 
 ### Week 5
-- TBD
+- Using Audio Source instead of text query
+- Creating example!
 
 ## Documentation
 - The documentation that is more related to detailed process or personal thoughts will be written in individual's blog posts, while information that can be used as instructions or to guide other people will exist inside this project repository for further users and contributors. Initial documentation including basic intro, proposal and schedule will be continuously updated in README.md.
