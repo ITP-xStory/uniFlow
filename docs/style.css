@@ -15,7 +15,7 @@ body {
 }
 
 .wrapper {
-  margin-top: 4rem;
+  margin-top: 2rem;
   margin-bottom: 8rem;
   margin-left: 2rem;
   margin-right: 2rem;
@@ -26,7 +26,7 @@ body {
 h1, h2, h3, h4, h5 {
   font-family: 'Work Sans', sans-serif;
   border-bottom: 1px solid #eaecef;
-  padding-top: .3em;
+  padding-top: .6em;
   padding-bottom: .3em;
 }
 
@@ -63,4 +63,17 @@ a {
   z-index: 200000;
   cursor: pointer;
   user-select: none;
+}
+
+.license {
+  bottom: 1rem;
+  left: 2rem;
+  display: block;
+  position: fixed;
+  z-index: -100;
+  user-select: none;
+}
+
+.license p{
+  color: #cccccc;
 }
