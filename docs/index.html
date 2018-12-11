@@ -8,159 +8,161 @@
 </head>
 
 <body>
-	<div class="to-top">
-		<p><a href=#top>^ Back to top</a></p>
-	</div>
-	<h1 id="top">Dialogflow V2: Unity Plugin Prototype</h1>
-	<p>GitHub Repository: <a href="https://github.com/alicehgsun/dialogflow-unity-v2" target="_blank">github.com/alicehgsun/dialogflow-unity-v2</a></p>
-	<ul>
-		<a href=#introduction>
-			<li>Introduction</li>
-		</a>
-		<a href=#getting-started>
-			<li>Getting Started</li>
-		</a>
-		<a href=#define-the-problem>
-			<li>Define the Problem</li>
-		</a>
-		<a href=#accessibility>
-			<li>Accessibility</li>
-		</a>
-		<a href=#team-members>
-			<li>Team Members</li>
-		</a>
-		<a href=#mentoring>
-			<li>Mentoring</li>
-		</a>
-		<a href=#longer-term-goals>
-			<li>Longer-Term Goals</li>
-		</a>
-	</ul>
-	<h2 id="introduction">Introduction</h2>
-	<p>The Dialogflow V2 Unity Plugin is a continuation from <a href="https://github.com/dialogflow/dialogflow-unity-client" target="_blank">Api.ai: Unity Plugin</a>,
-		which made it easy to integrate the Dialogflow(Api.ai) natural language processing API into your Unity project.
-		It's built as a team project in <a href="https://github.com/Open-Source-Studio-at-ITP/" target="_blank">Open Source Studio at ITP</a> and not an official plugin from Google or Unity.
-	</p>
-	<h2 id="getting-started">Getting Started</h2>
-	<ol>
-		<a href=#step1>
-			<li>Get the Service Account Key As JSON</li>
-		</a>
-		<a href=#step2>
-			<li>Set the Environment Variable to JSON File Path</li>
-		</a>
-		<a href=#step3>
-			<li>Install the Latest Cloud SDK & Get the Access Token</li>
-		</a>
-		<a href=#step4>
-			<li>Create JsonData Script Inside Plugins Folder of Unity</li>
-		</a>
-		<a href=#step5>
-			<li>Create Dialogflow API Script Inside Assets of Unity</li>
-		</a>
-	</ol>
-	<h3 id="step1">Get the Service Account Key As JSON</h3>
-	<p>The following process is based on <a href="https://dialogflow.com/docs/reference/v2-auth-setup#getting_the_service_account_key" target="_blank">Getting the Service Account key</a>.</p>
-	<div class="video">
-		<iframe title="STEP 1: Get the Service Account Key As JSON" width="560" height="315" src="https://www.youtube.com/embed/5NpuJ-YMJt8" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-	</div>
-	<ol>
-		<li>Go to Dialogflow console page.</li>
-		<li>Click on the gear icon, to the right of the agent name.</li>
-		<li>Under the GOOGLE PROJECT section, click on the name of the Service Account.</li>
-		<li>Click on the Create Service Account button at the top of the page.</li>
-		<li>In the pop up, enter a name for the service account.</li>
-		<li>Click on Role. Under the Dialogflow category, select Dialogflow API Admin.</li>
-		<li>Check the Furnish a new private key option and make sure JSON is selected for Key type.</li>
-		<li>Click the Create button.</li>
-	</ol>
-	<h3 id="step2">Set the Environment Variable to JSON File Path</h3>
-	<p>The following process is based on <a href="https://dialogflow.com/docs/reference/v2-auth-setup#using_the_key" target="_blank">Using the key</a>.</p>
-	<div class="video">
-		<iframe title="STEP 2: Set the Environment Variable to JSON File Path" width="560" height="315" src="https://www.youtube.com/embed/oGYvVuxYpk0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-		  allowfullscreen></iframe>
-	</div>
-	<ol>
-		<li>Create the file system in any location, and open in a terminal.</li>
-		<li>Set the environment variable GOOGLE_APPLICATION_CREDENTIALS to the file path of the JSON file that contains your service account key using this command: <br>
-			<code>export GOOGLE_APPLICATION_CREDENTIALS=<span class="input">YOUR_JSON_PATH</span></code></li>
-		<li>Optional. Confirm the variable using this command: <br>
-			<code>echo $GOOGLE_APPLICATION_CREDENTIALS</code></li>
-	</ol>
-	<h3 id="step3">Install the Latest Cloud SDK & Get the Access Token</h3>
-	<p>The following process is based on <a href="https://cloud.google.com/sdk/docs/" target="_blank">Google Cloud SDK documentation</a>.</p>
-	<div class="video">
-		<iframe title="STEP 3: Install the Latest Cloud SDK & Get the Access Token" width="560" height="315" src="https://www.youtube.com/embed/mf0pgTB20dE" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-		  allowfullscreen></iframe>
-	</div>
-	<ol>
-		<li>Download the <a href="https://cloud.google.com/sdk/docs/" target="_blank">latest Cloud SDK version</a>.</li>
-		<li>Extract the contents of the file to any location on your file system.</li>
-		<li>Run gcloud init to initialize the SDK using this command: <br>
-			<code>./google-cloud-sdk/bin/gcloud init</code></li>
-		<li>Finish initializing and run gcloud auth to get access token using this command: <br>
-			<code>./google-cloud-sdk/bin/gcloud auth application-default print-access-token</code></li>
-	</ol>
-	<h3 id="step4">Create JsonData Script Inside Plugins Folder of Unity</h3>
-	<div class="video">
-		<iframe title="STEP 4: Create JsonData Script Inside Plugins Folder of Unity" width="560" height="315" src="https://www.youtube.com/embed/vx4yQHG2mlc" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-		  allowfullscreen></iframe>
-	</div>
-	<ol>
-		<li>Download or copy <a href="https://github.com/alicehgsun/dialogflow-unity-v2/blob/master/Assets/Plugins/JsonData.cs" target="_blank">JsonData.cs</a> from the GitHub repository.</li>
-		<li>Open your Unity project, and create Plugins folder inside Assets.</li>
-		<li>In the Plugins folder, create new C# Script and paste the JsonData.cs.</li>
-	</ol>
-	<h3 id="step5">Create Dialogflow API Script Inside Assets of Unity</h3>
-	<div class="video">
-		<iframe title="STEP 5: Create Dialogflow API Script Inside Assets of Unity" width="560" height="315" src="https://www.youtube.com/embed/SJe82-B7i2Y" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-		  allowfullscreen></iframe>
-	</div>
-	<ol>
-		<li>Download or copy <a href="https://github.com/alicehgsun/dialogflow-unity-v2/blob/master/Assets/DialogflowAPIScript.cs" target="_blank">DialogflowAPIScript.cs</a> from the GitHub repository.</li>
-		<li>Open your Unity project, select the object to add component.</li>
-		<li>Inside Inspector, click Add Component and select New Script.</li>
-		<li>Paste DialogflowAPIScript.cs in the new script.</li>
-		<li>Optional. If you changed file names of JsonData.cs and DialogflowAPIScript.cs, update them.</li>
-		<li>Insert <span class="input">YOUR_PROJECT_ID.</span></li>
+	<div class="wrapper">
+		<div class="to-top">
+			<p><a href=#top>^ Back to top</a></p>
+		</div>
+		<h1 id="top">Dialogflow V2: Unity Plugin Prototype</h1>
+		<p>GitHub Repository: <a href="https://github.com/alicehgsun/dialogflow-unity-v2" target="_blank">github.com/alicehgsun/dialogflow-unity-v2</a></p>
 		<ul>
+			<a href=#introduction>
+				<li>Introduction</li>
+			</a>
+			<a href=#getting-started>
+				<li>Getting Started</li>
+			</a>
+			<a href=#define-the-problem>
+				<li>Define the Problem</li>
+			</a>
+			<a href=#accessibility>
+				<li>Accessibility</li>
+			</a>
+			<a href=#team-members>
+				<li>Team Members</li>
+			</a>
+			<a href=#mentoring>
+				<li>Mentoring</li>
+			</a>
+			<a href=#longer-term-goals>
+				<li>Longer-Term Goals</li>
+			</a>
+		</ul>
+		<h2 id="introduction">Introduction</h2>
+		<p>The Dialogflow V2 Unity Plugin is a continuation from <a href="https://github.com/dialogflow/dialogflow-unity-client" target="_blank">Api.ai: Unity Plugin</a>,
+			which made it easy to integrate the Dialogflow(Api.ai) natural language processing API into your Unity project.
+			It's built as a team project in <a href="https://github.com/Open-Source-Studio-at-ITP/" target="_blank">Open Source Studio at ITP</a> and not an official plugin from Google or Unity.
+		</p>
+		<h2 id="getting-started">Getting Started</h2>
+		<ol>
+			<a href=#step1>
+				<li>Get the Service Account Key As JSON</li>
+			</a>
+			<a href=#step2>
+				<li>Set the Environment Variable to JSON File Path</li>
+			</a>
+			<a href=#step3>
+				<li>Install the Latest Cloud SDK & Get the Access Token</li>
+			</a>
+			<a href=#step4>
+				<li>Create JsonData Script Inside Plugins Folder of Unity</li>
+			</a>
+			<a href=#step5>
+				<li>Create Dialogflow API Script Inside Assets of Unity</li>
+			</a>
+		</ol>
+		<h3 id="step1">Get the Service Account Key As JSON</h3>
+		<p>The following process is based on <a href="https://dialogflow.com/docs/reference/v2-auth-setup#getting_the_service_account_key" target="_blank">Getting the Service Account key</a>.</p>
+		<div class="video">
+			<iframe title="STEP 1: Get the Service Account Key As JSON" width="560" height="315" src="https://www.youtube.com/embed/5NpuJ-YMJt8" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+		</div>
+		<ol>
 			<li>Go to Dialogflow console page.</li>
 			<li>Click on the gear icon, to the right of the agent name.</li>
-			<li>Under the GOOGLE PROJECT section, you can find Project ID.</li>
-		</ul>
-		<li>Insert <span class="input">YOUR_ACCESS_TOKEN</span>.</li>
+			<li>Under the GOOGLE PROJECT section, click on the name of the Service Account.</li>
+			<li>Click on the Create Service Account button at the top of the page.</li>
+			<li>In the pop up, enter a name for the service account.</li>
+			<li>Click on Role. Under the Dialogflow category, select Dialogflow API Admin.</li>
+			<li>Check the Furnish a new private key option and make sure JSON is selected for Key type.</li>
+			<li>Click the Create button.</li>
+		</ol>
+		<h3 id="step2">Set the Environment Variable to JSON File Path</h3>
+		<p>The following process is based on <a href="https://dialogflow.com/docs/reference/v2-auth-setup#using_the_key" target="_blank">Using the key</a>.</p>
+		<div class="video">
+			<iframe title="STEP 2: Set the Environment Variable to JSON File Path" width="560" height="315" src="https://www.youtube.com/embed/oGYvVuxYpk0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+			  allowfullscreen></iframe>
+		</div>
+		<ol>
+			<li>Create the file system in any location, and open in a terminal.</li>
+			<li>Set the environment variable GOOGLE_APPLICATION_CREDENTIALS to the file path of the JSON file that contains your service account key using this command: <br>
+				<code>export GOOGLE_APPLICATION_CREDENTIALS=<span class="input">YOUR_JSON_PATH</span></code></li>
+			<li>Optional. Confirm the variable using this command: <br>
+				<code>echo $GOOGLE_APPLICATION_CREDENTIALS</code></li>
+		</ol>
+		<h3 id="step3">Install the Latest Cloud SDK & Get the Access Token</h3>
+		<p>The following process is based on <a href="https://cloud.google.com/sdk/docs/" target="_blank">Google Cloud SDK documentation</a>.</p>
+		<div class="video">
+			<iframe title="STEP 3: Install the Latest Cloud SDK & Get the Access Token" width="560" height="315" src="https://www.youtube.com/embed/mf0pgTB20dE" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+			  allowfullscreen></iframe>
+		</div>
+		<ol>
+			<li>Download the <a href="https://cloud.google.com/sdk/docs/" target="_blank">latest Cloud SDK version</a>.</li>
+			<li>Extract the contents of the file to any location on your file system.</li>
+			<li>Run gcloud init to initialize the SDK using this command: <br>
+				<code>./google-cloud-sdk/bin/gcloud init</code></li>
+			<li>Finish initializing and run gcloud auth to get access token using this command: <br>
+				<code>./google-cloud-sdk/bin/gcloud auth application-default print-access-token</code></li>
+		</ol>
+		<h3 id="step4">Create JsonData Script Inside Plugins Folder of Unity</h3>
+		<div class="video">
+			<iframe title="STEP 4: Create JsonData Script Inside Plugins Folder of Unity" width="560" height="315" src="https://www.youtube.com/embed/vx4yQHG2mlc" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+			  allowfullscreen></iframe>
+		</div>
+		<ol>
+			<li>Download or copy <a href="https://github.com/alicehgsun/dialogflow-unity-v2/blob/master/Assets/Plugins/JsonData.cs" target="_blank">JsonData.cs</a> from the GitHub repository.</li>
+			<li>Open your Unity project, and create Plugins folder inside Assets.</li>
+			<li>In the Plugins folder, create new C# Script and paste the JsonData.cs.</li>
+		</ol>
+		<h3 id="step5">Create Dialogflow API Script Inside Assets of Unity</h3>
+		<div class="video">
+			<iframe title="STEP 5: Create Dialogflow API Script Inside Assets of Unity" width="560" height="315" src="https://www.youtube.com/embed/SJe82-B7i2Y" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+			  allowfullscreen></iframe>
+		</div>
+		<ol>
+			<li>Download or copy <a href="https://github.com/alicehgsun/dialogflow-unity-v2/blob/master/Assets/DialogflowAPIScript.cs" target="_blank">DialogflowAPIScript.cs</a> from the GitHub repository.</li>
+			<li>Open your Unity project, select the object to add component.</li>
+			<li>Inside Inspector, click Add Component and select New Script.</li>
+			<li>Paste DialogflowAPIScript.cs in the new script.</li>
+			<li>Optional. If you changed file names of JsonData.cs and DialogflowAPIScript.cs, update them.</li>
+			<li>Insert <span class="input">YOUR_PROJECT_ID.</span></li>
+			<ul>
+				<li>Go to Dialogflow console page.</li>
+				<li>Click on the gear icon, to the right of the agent name.</li>
+				<li>Under the GOOGLE PROJECT section, you can find Project ID.</li>
+			</ul>
+			<li>Insert <span class="input">YOUR_ACCESS_TOKEN</span>.</li>
+			<ul>
+				<li>Get the access token via running gcloud auth.</li>
+				<li>More details in <a href=#step3>Install the Latest Cloud SDK & Get the Access Token</a>.</li>
+			</ul>
+			</ul>
+		</ol>
+		<h2 id="define-the-problem">Define the Problem</h2>
 		<ul>
-			<li>Get the access token via running gcloud auth.</li>
-			<li>More details in <a href=#step3>Install the Latest Cloud SDK & Get the Access Token</a>.</li>
+			<li>Api.ai: Unity Plugin is no longer working in Dialogflow V2, due to the difference in the way the basic system works (<a href="https://miningbusinessdata.com/dialogflow-api-v2-versus-v1/" target="_blank">Dialogflow API v2 versus v1</a>).</li>
+			<li>Dialogflow API V1 will be shut down in one year – on <a href="https://plus.google.com/+dialogflow/posts/M6EUgZFhckL" target="_blank">October 23rd, 2019</a>.</li>
+			<li>The goal is to figure out ways to build similar plugin that works in Dialogflow V2 system.</li>
 		</ul>
+		<h2 id="accessibility">Accessibility</h2>
+		<p>All documentation is done with considerations of the <a href="https://www.w3.org/WAI/standards-guidelines/wcag/" target="_blank">W3C Web Content Accessibility Guide</a>.
+		</p>
+		<h2 id="team-members">Team Members</h2>
+		<ul>
+			<li><a href="http://www.ilanabonder.com/" target="_blank">Ilana Pecis Bonder</a></li>
+			<li><a href="http://www.alicehgsun.com/blog" target="_blank">Alice Sun</a></li>
+			<li><a href="https://linzhangcs.github.io/blog/" target="_blank">Lin Zhang</a></li>
 		</ul>
-	</ol>
-	<h2 id="define-the-problem">Define the Problem</h2>
-	<ul>
-		<li>Api.ai: Unity Plugin is no longer working in Dialogflow V2, due to the difference in the way the basic system works (<a href="https://miningbusinessdata.com/dialogflow-api-v2-versus-v1/" target="_blank">Dialogflow API v2 versus v1</a>).</li>
-		<li>Dialogflow API V1 will be shut down in one year – on <a href="https://plus.google.com/+dialogflow/posts/M6EUgZFhckL" target="_blank">October 23rd, 2019</a>.</li>
-		<li>The goal is to figure out ways to build similar plugin that works in Dialogflow V2 system.</li>
-	</ul>
-	<h2 id="accessibility">Accessibility</h2>
-	<p>All documentation is done with considerations of the <a href="https://www.w3.org/WAI/standards-guidelines/wcag/" target="_blank">W3C Web Content Accessibility Guide</a>.
-	</p>
-	<h2 id="team-members">Team Members</h2>
-	<ul>
-		<li><a href="http://www.ilanabonder.com/" target="_blank">Ilana Pecis Bonder</a></li>
-		<li><a href="http://www.alicehgsun.com/blog" target="_blank">Alice Sun</a></li>
-		<li><a href="https://linzhangcs.github.io/blog/" target="_blank">Lin Zhang</a></li>
-	</ul>
-	<h2 id="mentoring">Mentoring</h2>
-	<ul>
-		<li>Nicole He: Dialogflow Mentor</li>
-		<li>Igal Nassima: Unity Mentor</li>
-	</ul>
-	<h2 id="longer-term-goals">Longer-Term Goals</h2>
-	<ul>
-		<li>Make the process of getting access token simpler.</li>
-		<li>Conduct larger scale of user testing.</li>
-		<li>Improve interface design in Unity.</li>
-	</ul>
+		<h2 id="mentoring">Mentoring</h2>
+		<ul>
+			<li>Nicole He: Dialogflow Mentor</li>
+			<li>Igal Nassima: Unity Mentor</li>
+		</ul>
+		<h2 id="longer-term-goals">Longer-Term Goals</h2>
+		<ul>
+			<li>Make the process of getting access token simpler.</li>
+			<li>Conduct larger scale of user testing.</li>
+			<li>Improve interface design in Unity.</li>
+		</ul>
+	</div>
 </body>
 
 </html>

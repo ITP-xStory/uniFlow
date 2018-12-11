@@ -1,13 +1,30 @@
-@import url('https://fonts.googleapis.com/css?family=Roboto|Roboto+Mono|Work+Sans');
+@import url('https://fonts.googleapis.com/css?family=Roboto|Roboto+Mono:500|Work+Sans:400');
+
+html, body {
+  height: 100%;
+}
+
+html {
+  display: table;
+  margin: auto;
+}
 
 body {
-  margin: 2rem;
+  display: table-cell;
+  vertical-align: middle;
+}
+
+.wrapper {
+  margin-top: 4rem;
+  margin-bottom: 8rem;
+  margin-left: 2rem;
+  margin-right: 2rem;
   max-width: 800px;
+  word-wrap: break-word;
 }
 
 h1, h2, h3, h4, h5 {
   font-family: 'Work Sans', sans-serif;
-  font-weight: 500;
   border-bottom: 1px solid #eaecef;
   padding-top: .3em;
   padding-bottom: .3em;
@@ -15,12 +32,10 @@ h1, h2, h3, h4, h5 {
 
 p, ol, ul {
   font-family: 'Roboto', sans-serif;
-  font-weight: 400;
 }
 
 code {
   font-family: 'Roboto Mono', monospace;
-  font-weight: 500;
   font-size: 90%;
   color: #717171;
 }
@@ -38,6 +53,7 @@ a {
   color: #de1159;
   font-style: italic;
 }
+
 
 .to-top {
   bottom: 1rem;
