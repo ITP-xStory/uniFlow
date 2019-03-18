@@ -1,4 +1,4 @@
-using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
 using System.Threading;
 using JsonData;
@@ -31,9 +31,15 @@ public class MicrophoneCapture : MonoBehaviour
 	private readonly object thisLock = new object();
 	private volatile bool recordingActive;
 
+	public Animator anim;
+	public UnityEngine.UI.Text CharaText;
+
+
 	//Use this for initialization
 	void Start()
 	{
+		anim = GetComponent<Animator> ();
+		CharaText.text = "";
 		//Check if there is at least one microphone connected
 		if (Microphone.devices.Length <= 0)
 		{
@@ -70,38 +76,37 @@ public class MicrophoneCapture : MonoBehaviour
 			if (!Microphone.IsRecording(null))
 			{
 				//Case the 'Record' button gets pressed
-				if (GUI.Button(new Rect(Screen.width / 2 - 100, Screen.height / 2 - 25, 200, 50), "Record"))
+				if (GUI.Button(new Rect(Screen.width / 4 - 100, Screen.height / 4 - 25, 200, 50), "Record"))
 				{
 					//Start recording and store the audio captured from the microphone at the AudioClip in the AudioSource
 					//goAudioSource.clip = Microphone.Start(null, true, 20, maxFreq);
 					//recordedClip = goAudioSource.clip;
 					//samples = new float[goAudioSource.clip.samples];
-
 					//handle dialogflow
+					CharaText.text = "...?";
 					StartListening(goAudioSource);
 				}
 			}
 			else //Recording is in progress
 			{
 				//Case the 'Stop and Play' button gets pressed
-				if (GUI.Button(new Rect(Screen.width / 2 - 100, Screen.height / 2 - 25, 200, 50), "Stop and Play!"))
+				if (GUI.Button(new Rect(Screen.width / 4 - 100, Screen.height / 4 - 25, 200, 50), "Stop and Play!"))
 				{
 					//Microphone.End(null); //Stop the audio recording
 					//goAudioSource.Play(); //Playback the recorded audio
 					//Debug.Log(recordedClip.length);
-
 					//send out request
 					StopListening();
 				}
 
-				GUI.Label(new Rect(Screen.width / 2 - 100, Screen.height / 2 + 25, 200, 50), "Recording in progress...");
+				GUI.Label(new Rect(Screen.width / 4 - 100, Screen.height / 4 + 25, 200, 50), "Recording in progress...");
 			}
 		}
 		else // No microphone
 		{
 			//Print a red "Microphone not connected!" message at the center of the screen
 			GUI.contentColor = Color.red;
-			GUI.Label(new Rect(Screen.width / 2 - 100, Screen.height / 2 - 25, 200, 50), "Microphone not connected!");
+			GUI.Label(new Rect(Screen.width / 4 - 100, Screen.height / 4 - 25, 200, 50), "Microphone not connected!");
 		}
 
 	}
@@ -178,9 +183,6 @@ public class MicrophoneCapture : MonoBehaviour
 			UnityWebRequest postRequest = new UnityWebRequest(url, "POST");
 			RequestBody requestBody = new RequestBody();
 			requestBody.queryInput = new QueryInput();
-			//requestBody.queryInput.text = new TextInput();
-			//requestBody.queryInput.text.text = "hello";
-			//requestBody.queryInput.text.languageCode = "en";
 			requestBody.queryInput.audioConfig = new InputAudioConfig();
 			requestBody.queryInput.audioConfig.audioEncoding = AudioEncoding.AUDIO_ENCODING_UNSPECIFIED;
 			//TODO: check if that the sample rate hertz
