@@ -1,4 +1,4 @@
-﻿using System.Collections;
+using System.Collections;
 using System.Collections.Generic;
 using System.Threading;
 using JsonData;
@@ -31,15 +31,10 @@ public class MicrophoneCapture : MonoBehaviour
 	private readonly object thisLock = new object();
 	private volatile bool recordingActive;
 
-	public Animator anim;
-	public UnityEngine.UI.Text CharaText;
-
 
 	//Use this for initialization
 	void Start()
 	{
-		anim = GetComponent<Animator> ();
-		CharaText.text = "";
 		//Check if there is at least one microphone connected
 		if (Microphone.devices.Length <= 0)
 		{
@@ -83,7 +78,6 @@ public class MicrophoneCapture : MonoBehaviour
 					//recordedClip = goAudioSource.clip;
 					//samples = new float[goAudioSource.clip.samples];
 					//handle dialogflow
-					CharaText.text = "...?";
 					StartListening(goAudioSource);
 				}
 			}
