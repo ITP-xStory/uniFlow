@@ -6,7 +6,6 @@
 - [Deliverables](#deliverables)
 - [Timeline](#timeline)
 - [Documentation](#documentation)
-- [Documentation](#documentation)
 - [Accessibility](#accessibility)
 - [Mentoring](#mentoring)
 - [More about team](#more-about-team)
@@ -93,7 +92,7 @@ This project will be completed over 5 weeks (Nov 6 - Dec 11). Describe a timelin
 - Creating example!
 
 ## Documentation
-- Initial documentation including basic intro, proposal and brief process will be updated in README.md, while instructional contents will exist as a [GitHub Page](https://alicehgsun.github.io/dialogflow-unity-v2/).
+- Initial documentation including basic intro, proposal and brief process will be updated in README.md, while instructional contents will exist as a [GitHub Page](https://itp-xstory.github.io/uniFlow/).
 
 ## Accessibility
 All documentation will be done with considerations of the [W3C Web Content Accessibility Guide](https://www.w3.org/WAI/standards-guidelines/wcag/).
